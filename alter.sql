@@ -2,5 +2,21 @@
 SELECT * from person;
 
 ALTER TABLE person
-    ADD COLUMN profession VARCHAR(255) DEFAULT 'defProfession' NOT NULL;
+ADD COLUMN profession VARCHAR(255) DEFAULT 'defProfession' NOT NULL;
 
+INSERT INTO
+    person
+VALUES (
+        10, 'Moye', 'Toye', 25, TRUE, 'hello 123'
+    );
+
+ALTER TABLE person DROP COLUMN email;
+
+ALTER Table person RENAME COLUMN age to user_age;
+
+ALTER TABLE person Alter COLUMN profession Type VARCHAR(250);
+
+ALTER Table person Alter COLUMN user_age set NOT NULL;
+
+
+ALTER Table person Alter COLUMN user_age DROP NOT NULL;
