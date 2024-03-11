@@ -18,5 +18,13 @@ ALTER TABLE person Alter COLUMN profession Type VARCHAR(250);
 
 ALTER Table person Alter COLUMN user_age set NOT NULL;
 
-
 ALTER Table person Alter COLUMN user_age DROP NOT NULL;
+
+ALTER TABLE person
+ADD constraint unique_person_user_age UNIQUE (user_age);
+
+ALTER TABLE person
+ADD constraint pk_person_person_id PRIMARY KEY (person_id);
+
+ALTER TABLE person
+DROP constraint unique_person_user_age;
