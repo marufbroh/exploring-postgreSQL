@@ -32,3 +32,5 @@ DROP constraint unique_person_user_age;
 DROP TABLE person;
 
 TRUNCATE TABLE person;
+
+ 
