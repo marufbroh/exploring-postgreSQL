@@ -52,3 +52,10 @@ SELECT DISTINCT country from students;
 SELECT DISTINCT blood_group from students;
 
 SELECT * from students WHERE country = 'USA';
+
+SELECT * from students WHERE course = 'Physics' AND grade = 'A+';
+
+SELECT * from students WHERE country = 'USA' OR country = 'Canada';
+
+SELECT * from students WHERE grade = 'A+' AND country = 'USA';
+
