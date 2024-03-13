@@ -59,3 +59,16 @@ SELECT * from students WHERE country = 'USA' OR country = 'Canada';
 
 SELECT * from students WHERE grade = 'A+' AND country = 'USA';
 
+SELECT *
+from students
+WHERE (
+        country = 'USA'
+        OR country = 'Canada'
+    )
+    AND age = 20;
+
+SELECT * from students WHERE age >= 20 AND course = 'Chemistry';
+
+SELECT * from students WHERE age != 20;
+
+SELECT * from students WHERE age <> 20;
