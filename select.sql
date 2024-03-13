@@ -44,3 +44,11 @@ SELECT email, age, blood_group from students;
 SELECT email as "Student Email" from students;
 
 SELECT * FROM students ORDER BY first_name ASC;
+
+SELECT country from students ORDER BY country ASC;
+
+SELECT DISTINCT country from students;
+
+SELECT DISTINCT blood_group from students;
+
+SELECT * from students WHERE country = 'USA';
