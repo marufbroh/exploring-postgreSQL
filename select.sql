@@ -72,3 +72,20 @@ SELECT * from students WHERE age >= 20 AND course = 'Chemistry';
 SELECT * from students WHERE age != 20;
 
 SELECT * from students WHERE age <> 20;
+
+SELECT upper(first_name) as first_name_in_upper_case, * from students;
+
+SELECT concat(first_name,' ', last_name) as "Full Name", * from students;
+
+SELECT length(first_name) from students;
+
+SELECT avg(age) from students;
+
+SELECT max(age) from students;
+
+SELECT sum(age) from students;
+
+SELECT count(*) from students;
+
+SELECT max(length(first_name)) from students;
+
