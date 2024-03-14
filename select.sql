@@ -73,9 +73,11 @@ SELECT * from students WHERE age != 20;
 
 SELECT * from students WHERE age <> 20;
 
-SELECT upper(first_name) as first_name_in_upper_case, * from students;
+SELECT upper(first_name) as first_name_in_upper_case, *
+from students;
 
-SELECT concat(first_name,' ', last_name) as "Full Name", * from students;
+SELECT concat(first_name, ' ', last_name) as "Full Name", *
+from students;
 
 SELECT length(first_name) from students;
 
@@ -89,3 +91,12 @@ SELECT count(*) from students;
 
 SELECT max(length(first_name)) from students;
 
+SELECT * from students WHERE NOT country = 'USA';
+
+-- SELECT NULL = 1;
+
+SELECT * from students WHERE email IS NULL;
+
+SELECT * from students WHERE email IS NOT NULL;
+
+SELECT COALESCE(email, 'Email Not Available') as "Email", first_name from students;
