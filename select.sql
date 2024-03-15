@@ -100,9 +100,18 @@ SELECT * from students WHERE email IS NULL;
 
 SELECT * from students WHERE email IS NOT NULL;
 
-SELECT COALESCE(email, 'Email Not Available') as "Email", first_name from students;
+SELECT COALESCE(email, 'Email Not Available') as "Email", first_name
+from students;
 
 -- Multiple or using in
-SELECT * from students WHERE country IN('USA', 'UK', 'Canada');
+SELECT * from students WHERE country IN ('USA', 'UK', 'Canada');
 
-SELECT * from students WHERE country NOT IN('USA', 'UK', 'Canada');
+SELECT * from students WHERE country NOT IN ('USA', 'UK', 'Canada');
+
+SELECT * from students WHERE age BETWEEN 20 AND 22;
+
+SELECT *
+from students
+WHERE
+    dob BETWEEN '2000-01-01' AND '2005-01-01'
+ORDER BY dob;
