@@ -115,3 +115,11 @@ from students
 WHERE
     dob BETWEEN '2000-01-01' AND '2005-01-01'
 ORDER BY dob;
+
+SELECT * from students WHERE first_name LIKE '%a';
+
+SELECT * from students WHERE first_name LIKE 'A%';
+
+SELECT * from students WHERE first_name LIKE '_a%';
+
+SELECT * from students WHERE first_name ILIKE 'a%';
