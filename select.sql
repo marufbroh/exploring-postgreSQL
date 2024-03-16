@@ -123,3 +123,13 @@ SELECT * from students WHERE first_name LIKE 'A%';
 SELECT * from students WHERE first_name LIKE '_a%';
 
 SELECT * from students WHERE first_name ILIKE 'a%';
+
+SELECT * from students LIMIT 5 OFFSET 2;
+
+-- pagination
+SELECT * from students LIMIT 5 OFFSET 5 * 1;
+
+-- data deletion
+DELETE FROM students;
+
+DELETE FROM students WHERE grade = 'B';
