@@ -8,6 +8,9 @@ CREATE TABLE post (
     id SERIAL PRIMARY KEY, title TEXT NOT NULL, user_id INTEGER REFERENCES "user" (id)
 );
 
+ALTER table post
+    alter COLUMN user_id set NOT NULL;
+
 INSERT INTO
     "user" (username)
 VALUES ('akash'),
