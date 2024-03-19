@@ -5,11 +5,14 @@ CREATE TABLE "user" (
 );
 
 CREATE TABLE post (
-    id SERIAL PRIMARY KEY, title TEXT NOT NULL, user_id INTEGER REFERENCES "user" (id)
+    id SERIAL PRIMARY KEY, title TEXT NOT NULL, user_id INTEGER REFERENCES "user" (id) ON Delete CASCADE
 );
 
-ALTER table post
-    alter COLUMN user_id set NOT NULL;
+ALTER table post alter COLUMN user_id set NOT NULL;
+
+DROP Table post;
+
+DROP Table "user";
 
 INSERT INTO
     "user" (username)
@@ -54,3 +57,6 @@ VALUES (
     );
 
 SELECT * from post;
+
+-- delete
+DELETE from "user" WHERE id = 5;
