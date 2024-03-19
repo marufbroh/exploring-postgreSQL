@@ -5,7 +5,10 @@ CREATE TABLE "user" (
 );
 
 CREATE TABLE post (
-    id SERIAL PRIMARY KEY, title TEXT NOT NULL, user_id INTEGER REFERENCES "user" (id) ON Delete CASCADE
+    id SERIAL PRIMARY KEY, title TEXT NOT NULL, user_id INTEGER REFERENCES "user" (id)
+    -- on delete set NULL
+    --    ON Delete CASCADE
+    --  ON DELETE SET DEFAULT DEFAULT 2
 );
 
 ALTER table post alter COLUMN user_id set NOT NULL;
