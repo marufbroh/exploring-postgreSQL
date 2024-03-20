@@ -66,3 +66,6 @@ DELETE from "user" WHERE id = 5;
 
 -- see another table data using REFERENCES
 select *  from post  full OUTER join "user"  on post.user_id = "user".id
+
+SELECT title, username FROM post
+JOIN "user" on post.user_id = "user".id;
