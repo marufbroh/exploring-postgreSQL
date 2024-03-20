@@ -6,7 +6,7 @@
 -- is_active BOOLEAN,
 -- dob DATE
 -- )
--- 
+--
 -- ALTER  TABLE person RENAME to "user";
 
 -- DROP  TABLE "user";
@@ -44,7 +44,6 @@
 -- );
 
 -- INSERT  INTO person (person_id, first_name, last_name, age, is_active) VALUES(2,'Tamim', 'Iqbal', 24,true);
-
 
 -- INSERT  INTO person (person_id, first_name, last_name, age, is_active) VALUES(5,'Tamim', 'Moye', 24,true), (6,'Tamim', 'Toye', 24,true);
 

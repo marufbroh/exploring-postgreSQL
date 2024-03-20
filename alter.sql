@@ -26,11 +26,8 @@ ADD constraint unique_person_user_age UNIQUE (user_age);
 ALTER TABLE person
 ADD constraint pk_person_person_id PRIMARY KEY (person_id);
 
-ALTER TABLE person
-DROP constraint unique_person_user_age;
+ALTER TABLE person DROP constraint unique_person_user_age;
 
 DROP TABLE person;
 
 TRUNCATE TABLE person;
-
- 
