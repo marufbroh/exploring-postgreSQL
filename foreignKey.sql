@@ -68,13 +68,12 @@ SELECT title, username
 FROM post
     JOIN "user" on post.user_id = "user".id;
 
--- see another table data using REFERENCES
-select *
-from post
-    full OUTER join "user" on post.user_id = "user".id
-
 SELECT *
-FROM post
-    LEFT
+FROM post LEFT
     -- RIGHT 
     JOIN "user" on post.user_id = "user".id;
+
+-- see another table data using REFERENCES
+SELECT *
+FROM post
+    FULL OUTER JOIN "user" on post.user_id = "user".id
