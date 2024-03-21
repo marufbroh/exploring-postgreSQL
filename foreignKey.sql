@@ -64,11 +64,17 @@ SELECT * from post;
 -- delete
 DELETE from "user" WHERE id = 5;
 
+SELECT title, username
+FROM post
+    JOIN "user" on post.user_id = "user".id;
+
 -- see another table data using REFERENCES
 select *
 from post
     full OUTER join "user" on post.user_id = "user".id
 
-SELECT title, username
+SELECT *
 FROM post
+    LEFT
+    -- RIGHT 
     JOIN "user" on post.user_id = "user".id;
