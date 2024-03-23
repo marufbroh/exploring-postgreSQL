@@ -11,6 +11,10 @@ CREATE TABLE departments (
     department_id SERIAL PRIMARY KEY, department_name VARCHAR(50)
 );
 
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY, customer_id INT, order_date DATE, total_amount DECIMAL(10, 2)
+)
+
 INSERT INTO
     departments (department_name)
 VALUES ('Human Resources'),
@@ -164,4 +168,45 @@ SELECT extract(
     ) as "year", count(*)
 from employees
 GROUP BY
-    "year"
+    "year";
+
+INSERT INTO
+    orders (
+        customer_id, order_date, total_amount
+    )
+VALUES (101, '2023-05-15', 150.00),
+    (102, '2023-09-28', 280.50),
+    (103, '2023-12-10', 75.25),
+    (102, '2023-02-20', 430.80),
+    (105, '2023-07-03', 90.00),
+    (106, '2023-11-08', 210.75),
+    (101, '2023-04-25', 320.60),
+    (108, '2023-09-12', 185.20),
+    (109, '2023-03-30', 500.00),
+    (115, '2023-01-07', 80.45);
+
+-- DROP TABLE orders;
+SELECT * from orders;
+
+SELECT
+    customer_id,
+    count(order_id) as order_count,
+    sum(total_amount) as total_spent
+from orders
+GROUP BY
+    customer_id
+HAVING
+    count(order_id) >= 2;
+
+SELECT extract(
+        month
+        from order_date
+    ) as "month", count(order_id), sum(total_amount)
+from orders
+WHERE
+    extract(
+        year
+        from order_date
+    ) = 2023
+GROUP BY
+    "month";
